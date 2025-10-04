@@ -23,4 +23,22 @@ mandatoryAccounts:
     email: smaseko+cm-audit@amazon.com
     organizationalUnit: Security
     warm: false
-workloadAccounts: []
+workloadAccounts: 
+  - name: dev
+    description: Developer Account
+    email: smaseko+cm-dev@amazon.com
+    organizationalUnit: Workloads
+    warm: true
+    accountAlias: workload-dev-1
+  - name: qa
+    description: Developer Account
+    email: smaseko+cm-qa@amazon.com
+    organizationalUnit: Workloads
+    warm: true
+    accountAlias: workload-qa-2
+  - name: prod
+    description: Developer Account
+    email: smaseko+cm-prod@amazon.com
+    organizationalUnit: Workloads
+    warm: true
+    accountAlias: workload-prod-3
