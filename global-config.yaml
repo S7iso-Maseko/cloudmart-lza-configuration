@@ -1,8 +1,6 @@
 homeRegion: eu-west-1
 enabledRegions:
   - eu-west-1
-  - us-east-1
-  - eu-central
 managementAccountAccessRole: AWSControlTowerExecution
 cloudwatchLogRetentionInDays: 3653
 cdkOptions:
@@ -38,4 +36,5 @@ logging:
     attachPolicyToIamRoles: []
 tags: []
 iamRoleSsmParameters: []
+
 
