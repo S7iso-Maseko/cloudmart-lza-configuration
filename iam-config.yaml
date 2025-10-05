@@ -7,7 +7,7 @@ identityCenter:
       policies:
         awsManaged:
           - arn:aws:iam::aws:policy/AdministratorAccess
-      sessionDuration: PT12H
+      sessionDuration: 720
     - name: SecurityAdmins
       description: Permission Set for Security Admins
       policies:
