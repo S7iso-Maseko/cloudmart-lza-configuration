@@ -3,23 +3,23 @@ identityCenter:
   delegatedAdminAccount: Audit
   identityCenterPermissionSets:
     - name: AdministratorAccess
-        description: The Permission Set for AdministratorAccess
-        policies:
+      description: The Permission Set for AdministratorAccess
+      policies:
         awsManaged:
           - arn:aws:iam::aws:policy/AdministratorAccess
-        sessionDuration: PT12H
+      sessionDuration: PT12H
     - name: SecurityAdmins
-        description: Permission Set for Security Admins
-        policies:
+      description: Permission Set for Security Admins
+      policies:
         awsManaged:
           - arn:aws:iam::aws:policy/ReadOnlyAccess
-        sessionDuration: 60
+      sessionDuration: 60
     - name: DevOpsAdmins
-        description: Permission Set for DevOps Admins
-        policies:
+      description: Permission Set for DevOps Admins
+      policies:
         awsManaged:
           - arn:aws:iam::aws:policy/PowerUserAccess
-        sessionDuration: 60
+      sessionDuration: 60
         
   identityCenterAssignments:
     - name: AdministratorAccess-Management
@@ -37,22 +37,19 @@ identityCenter:
         - type: GROUP
           name: AWS-Management-SecurityAdmins
       deploymentTargets:
-        deploymentTargets:
-          organizationalUnits:
-            - Root
-          excludedAccounts:
-            - Audit
-            - LogArchive
+        organizationalUnits:
+          - Root
+        excludedAccounts:
+          - Audit
+          - LogArchive
     - name: DevOpsAdmins-Management
       permissionSetName: DevOpsAdmins
       principals:
         - type: GROUP
-            name: AWS-Management-DevOpsAdmins
+          name: AWS-Management-DevOpsAdmins
       deploymentTargets:
-        deploymentTargets:
-          organizationalUnits:
-            - Root
-          excludedAccounts:
-            - Audit
-            - LogArchive
-    
+        organizationalUnits:
+          - Root
+        excludedAccounts:
+          - Audit
+          - LogArchive
